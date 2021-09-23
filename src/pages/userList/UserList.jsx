@@ -23,22 +23,26 @@ export default function UserList() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3001/viewowners").then((response) => {
-      setOwners(response.data);
-    });
+    axios
+      .get("https://iparksl-admin.herokuapp.com/viewowners")
+      .then((response) => {
+        setOwners(response.data);
+      });
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/viewowners/byId/${id}`).then(() => {
-      // setOwners([listowners]);
-      const newOwnerList = listowners.filter((owner) => owner.id != id);
-      setOwners([...newOwnerList]);
-      
-      toast.success("Delete Success", {
-        autoClose: 2000,
+    axios
+      .delete(`https://iparksl-admin.herokuapp.com/viewowners/byId/${id}`)
+      .then(() => {
+        // setOwners([listowners]);
+        const newOwnerList = listowners.filter((owner) => owner.id != id);
+        setOwners([...newOwnerList]);
+
+        toast.success("Delete Success", {
+          autoClose: 2000,
+        });
+        // history.push("/users");
       });
-      // history.push("/users");
-    });
   };
 
   const handleFilter = (event) => {

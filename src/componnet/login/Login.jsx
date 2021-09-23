@@ -20,20 +20,21 @@ const Login = () => {
         e.preventDefault();
         const data = { username: username, password: password };
         // console.log(data);
-        axios.post("http://localhost:3001/auth/login", data)
-            .then((response) => {
-                if(response.data.error){
-                    // alert(response.data.error);
-                    toast.warn(response.data.error, { autoClose: 3000 });
-                }else {
-                    localStorage.setItem("accessToken", response.data);
-                    // setAuthState(true);
-                    history.push("/home");
-                    toast.success("Login Success", {
-                      autoClose: 3000,
-                    });
-                }
-            });
+        axios
+          .post("https://iparksl-admin.herokuapp.com/auth/login", data)
+          .then((response) => {
+            if (response.data.error) {
+              // alert(response.data.error);
+              toast.warn(response.data.error, { autoClose: 3000 });
+            } else {
+              localStorage.setItem("accessToken", response.data);
+              // setAuthState(true);
+              history.push("/home");
+              toast.success("Login Success", {
+                autoClose: 3000,
+              });
+            }
+          });
     };
 
     return (

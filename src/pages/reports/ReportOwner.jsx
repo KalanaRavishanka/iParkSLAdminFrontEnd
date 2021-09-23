@@ -22,7 +22,7 @@ function ReportOwner() {
     // e.preventDefault();
     // if (reportState === 1) {
     axios
-      .post(`http://localhost:3001/${reportState}`, data)
+      .post(`https://iparksl-admin.herokuapp.com/${reportState}`, data)
       .then((response) => {
         // const name = response.data.firstname;
         // console.log(response.data[0].username);

@@ -23,20 +23,24 @@ export default function ViewCustomers() {
   const [pageNumber, setPageNumber] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/customers").then((response) => {
-      setCustomer(response.data);
-    });
+    axios
+      .get("https://iparksl-admin.herokuapp.com/customers")
+      .then((response) => {
+        setCustomer(response.data);
+      });
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/customers/byId/${id}`).then(() => {
-      const newCustomerList = listcustomer.filter((owner) => owner.id != id);
-      setCustomer([...newCustomerList]);
+    axios
+      .delete(`https://iparksl-admin.herokuapp.com/customers/byId/${id}`)
+      .then(() => {
+        const newCustomerList = listcustomer.filter((owner) => owner.id != id);
+        setCustomer([...newCustomerList]);
 
-      toast.success("Delete Success", {
-        autoClose: 2000,
+        toast.success("Delete Success", {
+          autoClose: 2000,
+        });
       });
-    });
   };
 
   const handleFilter = (event) => {

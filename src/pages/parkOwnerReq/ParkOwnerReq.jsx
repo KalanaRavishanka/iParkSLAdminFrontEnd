@@ -20,12 +20,16 @@ export default function ParkOwnerReq() {
     // const [message, setMessage] = useState("");
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/owners/byId/${id}`).then((response)=>{
+        axios
+          .get(`https://iparksl-admin.herokuapp.com/owners/byId/${id}`)
+          .then((response) => {
             setReqDetails(response.data);
-        });
-        axios.get(`http://localhost:3001/req/byId/${id}`).then((response)=>{
+          });
+        axios
+          .get(`https://iparksl-admin.herokuapp.com/req/byId/${id}`)
+          .then((response) => {
             setReqPark(response.data);
-        });
+          });
     }, []);
     
     const handleAccept = (e) => {
@@ -37,13 +41,15 @@ export default function ParkOwnerReq() {
 
         // console.log(data);
         
-        axios.post("http://localhost:3001/sendconfirm/send", data).then((response) => {
-            if (response.data.status === 'success') {
-                alert("Accepted");
-            } else if (response.data.status === 'fail') {
-                alert("Couldn't accept try again later");
+        axios
+          .post("https://iparksl-admin.herokuapp.com/sendconfirm/send", data)
+          .then((response) => {
+            if (response.data.status === "success") {
+              alert("Accepted");
+            } else if (response.data.status === "fail") {
+              alert("Couldn't accept try again later");
             }
-        });
+          });
     }
     const handleReject = (e) => {
       e.preventDefault();
@@ -55,7 +61,10 @@ export default function ParkOwnerReq() {
       // console.log(data);
 
       axios
-        .post("http://localhost:3001/sendconfirm/sendreject", data)
+        .post(
+          "https://iparksl-admin.herokuapp.com/sendconfirm/sendreject",
+          data
+        )
         .then((response) => {
           if (response.data.status === "success") {
             alert("Accepted");

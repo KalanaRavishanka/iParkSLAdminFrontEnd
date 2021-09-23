@@ -21,22 +21,24 @@ function Report() {
     const data = {fromDate: fromDate, toDate: toDate}
     // e.preventDefault();
     // if (reportState === 1) {
-    axios.post(`http://localhost:3001/${reportState}`,data).then((response) => {
-      // const name = response.data.firstname;
-      // console.log(response.data[0].username);
-      setGetItems(response.data);
-      setShow(true);
-      setShowBtn(true);
+    axios
+      .post(`https://iparksl-admin.herokuapp.com/${reportState}`, data)
+      .then((response) => {
+        // const name = response.data.firstname;
+        // console.log(response.data[0].username);
+        setGetItems(response.data);
+        setShow(true);
+        setShowBtn(true);
 
-      console.log(response.data);
-      // axios.post("http://localhost:3001/generatereport/create-pdf", response.data).then(() => {
-      //   axios.get('http://localhost:3001/generatereport/fetch-pdf', { responseType: 'blob' }).then((res) => {
-      //     const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+        console.log(response.data);
+        // axios.post("http://localhost:3001/generatereport/create-pdf", response.data).then(() => {
+        //   axios.get('http://localhost:3001/generatereport/fetch-pdf', { responseType: 'blob' }).then((res) => {
+        //     const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
-      //     saveAs(pdfBlob, 'newPdf.pdf');
-      //   });
-      // });
-    });
+        //     saveAs(pdfBlob, 'newPdf.pdf');
+        //   });
+        // });
+      });
 
     // }
   };

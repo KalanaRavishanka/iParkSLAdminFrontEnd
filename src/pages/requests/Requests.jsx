@@ -20,7 +20,7 @@ export default function Requests() {
   let history = useHistory();
 
   useEffect(()=>{
-    axios.get("http://localhost:3001/owners").then((response)=>{
+    axios.get("https://iparksl-admin.herokuapp.com/owners").then((response) => {
       setListOfOwners(response.data);
     });
   },[]);

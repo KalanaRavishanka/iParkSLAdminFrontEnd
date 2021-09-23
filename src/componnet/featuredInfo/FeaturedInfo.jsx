@@ -11,16 +11,16 @@ export default function FeaturedInfo() {
     const [ownercount, setOwnerCount] = useState();
     useEffect(() => {
         axios
-          .get("http://localhost:3001/customers/findcustomers")
+          .get("https://iparksl-admin.herokuapp.com/customers/findcustomers")
           .then((response) => {
             // console.log(response.data.count);
-              setCusCount(response.data.count)
+            setCusCount(response.data.count);
           });
-        axios.get("http://localhost:3001/owners/findrequests").then((response) => {
+        axios.get("https://iparksl-admin.herokuapp.com/owners/findrequests").then((response) => {
             setReqCount(response.data.count);
         });
         axios
-          .get("http://localhost:3001/viewowners/findrequests")
+          .get("https://iparksl-admin.herokuapp.com/viewowners/findrequests")
           .then((response) => {
             setOwnerCount(response.data.count);
           });

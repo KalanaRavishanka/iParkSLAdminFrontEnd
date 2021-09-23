@@ -20,18 +20,19 @@ export default function Topbar() {
     let history = useHistory();
 
     useEffect(() => {
-        axios.get("http://localhost:3001/auth/auth",{
+        axios
+          .get("https://iparksl-admin.herokuapp.com/auth/auth", {
             headers: {
-                accessToken: localStorage.getItem("accessToken"),
+              accessToken: localStorage.getItem("accessToken"),
             },
-        }).then((response)=>{
-            if(response.data.error){
-                setAuthState(false);
+          })
+          .then((response) => {
+            if (response.data.error) {
+              setAuthState(false);
+            } else {
+              setAuthState(true);
             }
-            else {
-                setAuthState(true);
-            }
-        });
+          });
     });
 
     const logout = () =>{

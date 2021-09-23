@@ -16,7 +16,7 @@ export default function ReceivedPayment() {
   const [listpayment, setListPayment] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/receivedpayments").then((response) => {
+    axios.get("https://iparksl-admin.herokuapp.com/receivedpayments").then((response) => {
       setListPayment(response.data);
     });
   }, []);

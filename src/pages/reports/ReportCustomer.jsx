@@ -20,14 +20,13 @@ function ReportCustomer() {
   const handleDownload = (e) => {
     const data = { fromDate: fromDate, toDate: toDate };
     axios
-      .post(`http://localhost:3001/${reportState}`, data)
+      .post(`https://iparksl-admin.herokuapp.com/${reportState}`, data)
       .then((response) => {
         setGetItems(response.data);
         setShow(true);
         setShowBtn(true);
 
         console.log(response.data);
-        
       });
 
     // }
