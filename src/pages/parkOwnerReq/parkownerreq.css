@@ -1,0 +1,67 @@
+.containersidebar {
+    flex: 1;
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+
+.parkOwnerReq{
+    flex: 4;
+    /* display: flex; */
+}
+
+.parkcarosel {
+    margin-top: 20px;
+    max-width: 600px;
+    max-height: 280px;
+    text-align: center;
+    margin-left: 300px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.carouselimg{
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.item {
+    align-items: center;
+}
+
+.formhadle {
+    /* align-items: center; */
+    /* justify-content: center; */
+    max-width: 800px;
+    margin-top: 25px;
+    margin-left: 210px;
+}
+
+.buttons {
+    margin-left: 300px;
+    margin-top: -20px;
+    display: inline;
+}
+
+.buttonsrearrange {
+    margin-left: 10px;
+}
+
+.buttonsrearrange-red {
+    margin-left: 10px;
+    margin-top: -28px;
+}
+
+/* .imageSide {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+} */
+
+/* .detailsSide {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    margin-left: 20px;
+} */

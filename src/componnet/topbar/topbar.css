@@ -1,0 +1,28 @@
+
+.topbar {
+    background-color: #ffb907;
+    /* background-color: white; */
+    border-bottom: 2px solid black;
+}
+
+.icon-container {
+    display: flex;
+}
+
+.icon-container .icon-container-item {
+    margin-left: 20px;
+}
+
+.icon-container .item1 {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.logoutButton {
+    color: #ffb907;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    margin-right: -150px;
+    border-radius: 10px;
+}

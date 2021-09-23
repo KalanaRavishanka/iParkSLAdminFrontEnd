@@ -1,0 +1,130 @@
+.containersidebar {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: row;
+}
+
+.listcontainer {
+    flex: 4;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+
+.userList {
+    /* flex: 4; */
+    /* max-width: 800px; */
+    /* margin-left: 500px; */
+    max-height: 800px;
+}
+
+.userListData {
+    max-width: 800px;
+    display: flex;
+    /* align-items: center; */
+    margin-left: 220px;
+    /* margin-top: 10px; */
+    max-height: 800px;
+}
+
+.userListUser {
+    display: flex;
+    align-items: center;
+}
+
+.userListImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.userListEdit {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    margin-right: 20px;
+    /* height: 30px; */
+}
+
+.userListDelete{
+    color: red;
+    cursor: pointer;
+}
+
+.userListHead {
+    align-items: center;
+    margin-top: 20px;
+}
+
+.userListHeader {
+    text-align: center;
+}
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  /* color: white; */
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #ffb907;
+  cursor: pointer;
+  color: black;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #ffb907;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #ffb907;
+}
+.paginationDisabled a {
+  color: black;
+  background-color: #ffb907;
+}
+
+.searchInputs {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  /* background-color: rgba(128, 128, 128, 0.048); */
+  border: 1px solid black;
+  border-radius: 10px;
+  /* border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px; */
+  font-size: 18px;
+  padding: 15px;
+  height: 30px;
+  width: 300px;
+}
+
+.searchIcon {
+  height: 60px;
+  width: 50px;
+  background-color: white;
+  display: inline;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
